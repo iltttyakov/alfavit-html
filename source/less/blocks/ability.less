@@ -1,0 +1,103 @@
+.ability {
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+  }
+
+  &::before {
+    left: 35px;
+    bottom: -147px;
+
+    height: 401px;
+    width: 594px;
+
+    background-image: url("../img/ability_left.png");
+  }
+
+  &::after {
+    right: 5%;
+    top: 0;
+
+    height: 95px;
+    width: 95px;
+
+    background-image: url("../img/sup_before.png");
+  }
+
+  margin-bottom: 100px;
+}
+
+.ability__title {
+  margin-bottom: 55px;
+}
+
+.ability__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.ability__item {
+  width: 350px;
+  max-width: 31.7%;
+}
+
+.ability__value {
+  font-size: 60px;
+  line-height: 40px;
+  font-weight: 900;
+  color: #ffa93a;
+}
+
+.ability__name {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.ability__item p {
+  margin-bottom: 24px;
+
+  font-weight: 500;
+}
+
+@media (max-width: 1920px) {
+  .ability {
+    &::before {
+      width: 17%;
+      bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .ability {
+    margin-bottom: 50px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .ability__item {
+    max-width: 550px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

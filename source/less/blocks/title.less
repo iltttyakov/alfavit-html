@@ -1,0 +1,84 @@
+.title {
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 900;
+
+  &--h1 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  &--icon {
+    position: relative;
+
+    padding-left: 43px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: -10px;
+
+      width: 47px;
+      height: 78px;
+      margin-top: -39px;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../img/paragraph.svg");
+    }
+  }
+
+  &--white {
+    color: #ffffff;
+
+    &::before {
+      background-image: url("../img/paragraph--white.png");
+    }
+  }
+}
+
+.title--white .title__orange {
+  color: #ffffff;
+}
+
+.title__orange {
+  display: block;
+
+  color: #ffa93a;
+}
+
+@media (max-width: 1140px) {
+}
+
+@media (max-width: 500px) {
+  .title__orange {
+    display: inline;
+  }
+}
+
+@media (max-width: 430px) {
+  .title {
+    font-size: 28px;
+    line-height: 30px;
+
+    &--h1 {
+      font-size: 30px;
+      line-height: 29px;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .title {
+    &--icon {
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

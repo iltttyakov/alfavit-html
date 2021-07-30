@@ -1,0 +1,255 @@
+.why-kids {
+  overflow: hidden;
+
+  position: relative;
+
+  margin-top: 276px;
+  margin-bottom: 0;
+
+  padding-bottom: 155px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/bg2_1.png");
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &::before {
+    right: 65px;
+    top: 0;
+
+    width: 127px;
+    height: 127px;
+    background-image: url("../img/triangles.png");
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+
+    width: 360px;
+    height: 480px;
+    background-image: url("../img/bg2_2.png");
+  }
+}
+
+.why-kids__title {
+  margin-bottom: 33px;
+}
+
+.why-kids__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 36px;
+}
+
+.why-kids__info p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  max-width: 445px;
+  margin-right: 125px;
+
+  font-weight: 500;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+.why-kids__quote {
+  position: relative;
+
+  width: 100%;
+  padding: 45px 570px 55px 95px;
+
+  border-bottom-left-radius: 200px;
+  background-image: url("../img/why-kids_bg.png");
+  background-color: #eab745;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    height: 100%;
+    width: 45%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url("../img/why-kids_photo.png");
+  }
+}
+
+.why-kids__quote-paragraph {
+  position: relative;
+
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+  font-weight: 700;
+
+  padding-top: 65px;
+  padding-bottom: 65px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    width: 48px;
+    height: 45px;;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+
+    background-image: url("../img/text-quotes-.svg");
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+
+    background-image: url("../img/text-quotes.svg");
+  }
+}
+
+@media (max-width: 1860px) {
+  .why-kids {
+    &::after {
+      width: 15%;
+    }
+  }
+}
+
+@media (max-width: 1800px) {
+  .why-kids {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1640px) {
+  .why-kids {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .why-kids {
+    padding-bottom: 55px;
+  }
+
+  .why-kids__info {
+    justify-content: space-between;
+  }
+
+  .why-kids__info p {
+    max-width: 47%;
+    margin-right: 0;
+  }
+
+  .why-kids__quote {
+    padding-right: 350px;
+
+    &::after {
+      width: 30%;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .why-kids__quote {
+    padding-right: 45px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .why-kids__info p {
+    margin-bottom: 17px;
+  }
+}
+
+@media (max-width: 724px) {
+  .why-kids__info p {
+    max-width: 100%;
+    width: 100%;
+
+    margin-bottom: 17px;
+  }
+
+  .why-kids__quote {
+    width: 100%;
+    padding: 25px 0 25px 40px;
+    border-bottom-left-radius: 120px;
+  }
+
+  .why-kids__quote-paragraph {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    font-size: 20px;
+    line-height: 27px;
+
+    &::before,
+    &::after {
+      width: 24px;
+      height: 22px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .why-kids {
+    &::before {
+      display: none;
+    }
+  }
+
+  .why-kids__quote {
+    padding: 25px;
+    padding-left: 40px;
+
+    border-bottom-left-radius: 70px;
+  }
+
+  .why-kids__quote-paragraph {
+    width: 100%;
+
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

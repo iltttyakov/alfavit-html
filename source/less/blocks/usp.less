@@ -1,0 +1,122 @@
+.usp {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 200px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &::before {
+    left: -97px;
+    top: 213px;
+
+    width: 97px;
+    height: 93px;
+    background-image: url("../img/sup_before.png");
+  }
+
+  &--inner::after {
+    left: 143px;
+    bottom: -207px;
+
+    width: 105px;
+    height: 105px;
+    background-image: url("../img/sun.png");
+  }
+}
+
+.usp__main {
+  max-width: 685px;
+  padding-top: 139px;
+}
+
+.usp__offer {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.usp__photo {
+  position: absolute;
+  right: 0;
+
+  width: 42%;
+}
+
+.usp__button {
+  margin-top: 80px;
+}
+
+@media (max-width: 1800px) {
+  .usp {
+    margin-bottom: 100px;
+
+    &--inner::after {
+      bottom: 0;
+    }
+  }
+
+  .usp__photo {
+    position: relative;
+  }
+
+  .usp__main {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .usp__main {
+    padding-top: 0;
+  }
+
+  .usp__offer {
+    margin-top: 0;
+
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .usp__photo {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .usp {
+    &--inner::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .usp__main {
+    margin: 0 auto;
+  }
+
+  .usp__photo {
+    display: none;
+  }
+}
+
+@media (max-width: 548px) {
+  .usp__button {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+  .usp__button {
+    width: 100%;
+  }
+}

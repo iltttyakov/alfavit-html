@@ -1,0 +1,57 @@
+.order {
+  overflow: hidden;
+
+  margin-bottom: 130px;
+}
+
+.order__container {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: -285px;
+    top: 90px;
+
+    width: 110px;
+    height: 110px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../img/plus_orange.png");
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    right: -385px;
+    top: 45px;
+
+    width: 110px;
+    height: 32px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../img/wave_blue.png");
+  }
+}
+
+.order__title {
+  margin-bottom: 52px;
+}
+
+@media (max-width: 640px) {
+  .order {
+    margin-bottom: 85px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .order {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,83 @@
+.button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 90px;
+  padding-left: 152px;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: left;
+
+  background-color: #9a73e3;
+  border-radius: 45px;
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  outline: none;
+
+  &:visited {
+    color: #ffffff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ffa93a;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: -50px;
+    top: -88px;
+
+    width: 239px;
+    height: 239px;
+
+    background-image: url("../img/gift.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--arrow::after {
+    content: "";
+
+    position: absolute;
+    right: -117px;
+    top: -97px;
+
+    width: 87px;
+    height: 142px;
+
+    background-image: url("../img/arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 548px) {
+  .button--arrow::after {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .button {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
+  }
+}

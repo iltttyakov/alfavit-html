@@ -1,0 +1,152 @@
+.footer {
+  overflow: hidden;
+}
+
+.footer__container {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 110px;
+  padding-right: 110px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    right: -260px;
+    top: 80px;
+
+    width: 365px;
+    height: 359px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../img/diagonals.png");
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: -260px;
+    top: -80px;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: #abe0ea;
+
+    transform: rotate(45deg);
+  }
+}
+
+.footer__col-container {
+  display: flex;
+}
+
+.footer__list {
+  margin: 0;
+  margin-right: 30px;
+  padding: 0;
+
+  list-style: none;
+
+  &--255 {
+    width: 255px;
+  }
+
+  &--160 {
+    width: 160px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__social-list {
+  display: flex;
+  margin-top: 5px;
+}
+
+.footer__pay-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__title {
+  margin-top: 30px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.footer__list li a,
+.footer__link {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 16px;
+  line-height: 30px;
+  color: #2e221b;
+
+  transition: all 0.2s ease;
+
+  &:visited {
+    color: #2e221b;
+  }
+
+  &:hover,
+  &:focus {
+    color: #9a73e3;
+  }
+}
+
+.footer__contact-label {
+  margin-top: 0;
+  margin-bottom: -7px;
+
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.footer__social-icon {
+  margin-right: 5px;
+}
+
+.footer__pay-icon {
+  margin-bottom: 5px;
+}
+
+.footer__copyright {
+  width: 100%;
+  margin-top: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  font-size: 12px;
+  line-height: 16px;
+  color: #867c76;
+  text-align: center;
+}
+
+@media (max-width: 1140px) {
+  .footer__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__col-container {
+    flex-wrap: wrap;
+  }
+}

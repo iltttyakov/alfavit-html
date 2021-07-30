@@ -1,0 +1,119 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 730px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin-bottom: 25px;
+}
+
+.form__label {
+  margin-bottom: 15px;
+
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 28px;
+  height: 70px;
+  width: 100%;
+
+  font-weight: 700;
+  color: #ffa93a;
+
+  background-color: transparent;
+  border: 1px solid #ffa93a;
+  border-radius: 35px;
+
+  transition: all 0.2s ease;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #9a73e3;
+    color: #2e221b;
+  }
+}
+
+input::-webkit-input-placeholder {color:#ffa93a;}/* webkit */
+input::-moz-placeholder          {color:#ffa93a;}/* Firefox 19+ */
+input:-moz-placeholder           {color:#ffa93a;}/* Firefox 18- */
+input:-ms-input-placeholder      {color:#ffa93a;}/* IE */
+
+input:hover::-webkit-input-placeholder {color:#9a73e3;}/* webkit */
+input:hover::-moz-placeholder          {color:#9a73e3;}/* Firefox 19+ */
+input:hover:-moz-placeholder           {color:#9a73e3;}/* Firefox 18- */
+input:hover:-ms-input-placeholder      {color:#9a73e3;}/* IE */
+
+.form__info {
+  width: 350px;
+  padding-top: 21px;
+}
+
+.form__paragraph {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.form__button {
+  margin-top: 40px;
+}
+
+@media (max-width: 1140px) {
+  .form__body {
+    width: 100%;
+  }
+
+  .form__group {
+    width: 48%;
+  }
+
+  .form__info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__button {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 764px) {
+  .form__group {
+    width: 100%;
+  }
+
+  .form__info {
+    padding-top: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form__button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .form__button {
+    width: 100%;
+  }
+}

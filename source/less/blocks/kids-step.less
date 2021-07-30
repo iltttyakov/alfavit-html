@@ -1,0 +1,173 @@
+.kids-step {
+  overflow: hidden;
+
+  min-height: 682px;
+  padding-top: 85px;
+  padding-bottom: 140px;
+  margin-bottom: 95px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/bg2_3.png");
+}
+
+.kids-step__title {
+  position: relative;
+
+  margin-bottom: 50px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: 33px;
+    top: -54px;
+
+    width: 50%;
+    height: 200px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-image: url("../img/kids_steps-top.png");
+  }
+}
+
+.kids-step__container {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    left: -186px;
+    top: -76px;
+
+    width: 16%;
+    height: 382px;
+
+    background-image: url("../img/kids_steps-left.png");
+  }
+
+  &::after {
+    right: -257px;
+    bottom: -30px;
+
+    width: 32%;
+    height: 286px;
+
+    background-image: url("../img/kids_steps-right.png");
+  }
+}
+
+.kids-step__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.kids-step__item {
+  position: relative;
+
+  padding-top: 38px;
+  margin-bottom: 24px;
+  width: 540px;
+  max-width: 48%;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 43px;
+    height: 41px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--1::before {background-image: url("../img/01.png");}
+  &--2::before {background-image: url("../img/02.png");}
+  &--3::before {background-image: url("../img/03.png");}
+  &--4::before {background-image: url("../img/04.png");}
+}
+
+.kids-step__desc {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+@media (max-width: 1920px) {
+  .kids-step__title {
+    &::after {
+      top: -54px;
+
+      width: 30%;
+    }
+  }
+
+  .kids-step__container {
+    &::before {
+      top: 0;
+
+      width: 10%;
+    }
+
+    &::after {
+      bottom: 0;
+
+      width: 20%;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .kids-step {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 726px) {
+  .kids-step {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin-bottom: 70px;
+
+    background-color: #609b6c;
+    background-image: url("../img/blackboard-bg.jpg");
+  }
+
+  .kids-step__item {
+    max-width: 100%;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .kids-step__title::after {
+    display: none;
+  }
+}
